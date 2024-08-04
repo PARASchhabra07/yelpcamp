@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+
+    <% layout('/layout/boilerplate') %> 
+    <form action="/campgrounds/<%=camp._id%>?_method=PUT" method="POST" novalidate class="needs-validation">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input  class="form-control" id="exampleFormControlInput1" placeholder="Title" name="title"  value="<%= camp.title%>" required>
+          </div>
+          <div class="mb-3">
+            <label for="loaction" class="form-label">Location</label>
+            <input  class="form-control" id="exampleFormControlInput1" placeholder="Location" name="location"   value="<%=camp.location%>" required>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input  class="form-control" id="exampleFormControlInput1" placeholder="Price" name="price"    value="<%= camp.price%>" required>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Image Url</label>
+            <input  class="form-control" id="exampleFormControlInput1" placeholder="img_url" name="image"    value="<%= camp.image%>" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="description" required><%= camp.description %></textarea>
+          </div>
+        <button class="btn btn-info">Update Camp</button>
+      </form>
+      <div class="mt-3">
+        <a class="btn btn-secondary" href="/campgrounds/<%=camp._id%>">BACK TO CAMP</a>
+      </div>
+
+
+<!-- </body>
+</html> -->

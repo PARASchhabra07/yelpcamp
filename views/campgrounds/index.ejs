@@ -1,0 +1,23 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+
+    <!-- SO NOW ALL THIS CONTENT  OF THIS TEMPLATE FILE WILL BE PASSES TO BOILERPALTE TEMPLATE AND GIVES OUTPUT -->
+    <% layout('/layout/boilerplate') %>       
+    <h1> All Campgrounds</h1>
+    <ul>
+        <% for(let campground of campgrounds){%>
+             <li><a href="/campgrounds/<%=campground._id%>"><%=campground.title%></a></li>
+        <%}%>
+    </ul>
+    <div>
+        <a class="btn btn-secondary mb-3" href="campgrounds/new">Add Camp</a>
+    </div>
+
+<!-- </body>
+</html> -->
